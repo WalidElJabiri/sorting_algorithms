@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include "sort.h"
 /**
  * swap - swap two integers
  *
@@ -20,7 +24,7 @@ void swap(int *ptr1, int *ptr2 )
  */
 void bubble_sort(int *array, size_t size)
 {
-	int i, j;
+	unsigned int i, j;
 	if (array == NULL || size < 2)
 		return;
 

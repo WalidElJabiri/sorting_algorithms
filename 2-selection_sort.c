@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "sort.h"
 
 /**
  * print_array - Prints an array of integers
@@ -9,11 +10,11 @@
  */
 void swap(int *ptr1, int *ptr2 )
 {
-        int temp;
+	int temp;
 
-        temp = *ptr1;
-        *ptr1 = *ptr2;
-        *ptr2 = temp;
+	temp = *ptr1;
+	*ptr1 = *ptr2;
+	*ptr2 = temp;
 }
 
 /**
@@ -24,23 +25,23 @@ void swap(int *ptr1, int *ptr2 )
  */
 void selection_sort(int *array, size_t size)
 {
-    int i, j;
-    
-    for(i = 0; i < size - 1; i++)
-    {
-        int min = i;
+	unsigned int i, j;
 
-        for(j = i + 1; j < size; j++)
-        {
-            if (array[j] < array[min])
-            {
-                min = j;
-            }
-        }
-        if (min != i)
-        {
-            swap(array + i, array + min);
-            print_array(array, size);
-        }
-    }
+	for(i = 0; i < size - 1; i++)
+	{
+		unsigned int min = i;
+
+		for(j = i + 1; j < size; j++)
+		{
+			if (array[j] < array[min])
+			{
+				min = j;
+			}
+		}
+		if (min != i)
+		{
+			swap(array + i, array + min);
+			print_array(array, size);
+		}
+	}
 }

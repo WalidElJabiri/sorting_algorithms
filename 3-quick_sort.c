@@ -48,7 +48,7 @@ size_t partition(int *array, ssize_t low, ssize_t high, size_t size)
 	}
 	if (array[high] < array[i])
 	{
-		swap(array + i,array + hi);
+		swap(array + i,array + high);
 		print_array(array, size);
 	}
 

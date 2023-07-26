@@ -11,6 +11,7 @@
 void swap(int *ptr1, int *ptr2 ) 
 {
 	int temp;
+
 	temp = *ptr1;
 	*ptr1 = *ptr2;
 	*ptr2 = temp;
@@ -25,6 +26,7 @@ void swap(int *ptr1, int *ptr2 )
 void bubble_sort(int *array, size_t size)
 {
 	unsigned int i, j;
+
 	if (array == NULL || size < 2)
 		return;
 
